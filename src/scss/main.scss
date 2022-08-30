@@ -85,6 +85,12 @@ body {
             }
         }
     }
+
+    .container-banner-area {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 
@@ -92,6 +98,11 @@ body {
     img {
         max-width: 475px;
     }
+}
+
+.brand-vertical-text {
+    position: absolute;
+    right: 10px;
 }
 
 .section-nearby {
@@ -122,6 +133,15 @@ body {
             }
         }
     }
+
+    .block-connectivity {
+        margin-top: 45px;
+        p {
+            text-transform: uppercase;
+            color: $brand-primary-dark;
+            font-weight: 600;
+        }
+    }
 }
 
 .footer {
@@ -137,5 +157,10 @@ body {
             font-weight: 500;
             // font-size: 2rem;
         }
+    }
+
+    .md-logo {
+        max-width: 125px;
+        height: auto;
     }
 }

@@ -57,3 +57,38 @@ nearby_details.forEach(item => {
                             </div>
                   `);  
 });
+
+const connectivity_details = [
+  { "duration": 60, "desc": "Bike Score", "img": "images/demo-page-assets/img-block-1.png" },
+
+  { "duration": 96, "desc": "Transit Score", "img": "images/demo-page-assets/img-block-1.png" },
+
+  { "duration": 64, "desc": "Walk Score", "img": "images/demo-page-assets/img-block-1.png" },
+]
+
+connectivity_details.forEach(item => {
+  let elem = document.getElementById("id-block-connectivity"),
+  addAdditionalPadding = item.duration > 10 ? "additional-padding" : "";
+
+  let desc = item.desc.replace(/$/, "<br><br>");
+
+  elem.insertAdjacentHTML("beforeend",`
+                            <div class="col-lg-4 col-md-5 col-sm-8 block">
+                                <div class="p-4 pe-2">
+                                    <div class="row">
+                                        <div class="col-2 sec-left">
+                                            <span class="text-pri">${item.duration}</span>
+                                        </div>
+                                        <div class="col-8 sec-right">
+                                          <div class=" ${addAdditionalPadding}">
+                                            <span class="text-sec fs-4">
+                                                ${desc}
+                                            </span>
+                                          </div>
+                                          <img src="${item.img}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                  `);  
+});
