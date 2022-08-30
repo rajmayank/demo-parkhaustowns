@@ -89,10 +89,10 @@ export default {
           from: "src/images",
           to: "images",
         },
-        {
-          from: "src/video",
-          to: "video",
-        }
+        // {
+        //   from: "src/video",
+        //   to: "video",
+        // }
       ]
     }),
 
