@@ -1,0 +1,125 @@
+//---------------------------------------------
+//
+//  Table of Contents
+//
+//    1. Basics
+//    2. Brand Variables
+//    3. Globals
+//    3. Components
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Basics
+//---------------------------------------------
+
+@import "variables";
+@import "bootstrap";
+@import "fonts";
+
+//---------------------------------------------
+// 2. Brand Variables
+//---------------------------------------------
+
+$brand-primary-light: #c3cdc5 !important;
+$brand-primary-medium: #708677 !important;
+$brand-primary-dark: #132017 !important;
+
+$brand-primary-text: #080808 !important;
+
+//---------------------------------------------
+// 3. Globals
+//---------------------------------------------
+
+body {
+    font-size: 18px;
+    color: $brand-primary-text;
+    overflow-x: hidden;
+}
+
+.text-brand-dark {
+    color: $brand-primary-dark;
+}
+.bg-brand-light {
+    background-color: $brand-primary-light;
+}
+
+.btn-brand {
+    background-color: $brand-primary-dark;
+    color: white;
+
+    border-radius: 2px;
+
+    &:hover {
+        background-color: $brand-primary-medium;
+        color: white;
+    }
+}
+
+//---------------------------------------------
+// 4. Components
+//---------------------------------------------
+
+.section-banner {
+
+    padding: 0 30px 50px;
+
+    .container-navbar {
+        margin: 0;
+        padding: 0;
+
+        .nav-item {
+            text-transform: uppercase;
+            padding-right: 15px;
+            font-weight: 500;
+            // font-size: 2rem;
+        }
+
+        .navbar-brand {
+
+            margin: 0;
+            padding: 0;
+
+            img {
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+
+.block-1 {
+    img {
+        max-width: 475px;
+    }
+}
+
+.section-nearby {
+
+    .block {
+
+        .sec-left {
+            font-size: 140px;
+            z-index: 999;
+            line-height: 1;
+            color: $brand-primary-dark;
+            font-family: 'BodoniModa', serif;
+            letter-spacing: -15px;
+        }
+        .sec-right {
+            padding: 45px 10px 25px 45px;
+            background-color: $brand-primary-light;
+            color: $brand-primary-medium;
+
+            .additional-padding {
+                padding-left: 54px;
+            }
+
+            img {
+                margin-top: 25px;
+                max-width: 110%;
+                height: auto;
+            }
+        }
+    }
+}

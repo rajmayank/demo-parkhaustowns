@@ -1,0 +1,35 @@
+//---------------------------------------------
+//
+//  Fonts
+//
+//    1. Loading Mixins
+//    2. Loading Fonts
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Loading Mixins
+//---------------------------------------------
+
+@import "mixins/google-fonts";
+
+//---------------------------------------------
+// 2. Loading Fonts
+//---------------------------------------------
+
+@include googleFont((
+  "name": "Roboto",
+  "folder": "Roboto",
+  "files": "Roboto",
+  "weights": (300, 400, 700)
+));
+
+// @font-face {
+//   font-family: 'Bodoni';
+//   src: url('./fonts/BodoniModa-VariableFont.ttf') format('truetype');
+// }
+
+@font-face {
+  font-family: 'BodoniModa';
+  src: url('./fonts/BodoniModa.ttf') format('truetype');
+}
