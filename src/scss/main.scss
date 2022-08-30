@@ -123,3 +123,19 @@ body {
         }
     }
 }
+
+.footer {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav-items {
+        a {
+            text-transform: uppercase;
+            padding-right: 15px;
+            font-weight: 500;
+            // font-size: 2rem;
+        }
+    }
+}
