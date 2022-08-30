@@ -13,22 +13,22 @@ initBootstrap({
 
 
 const nearby_details = [
-  { "duration": 4, "desc": "minutes to the Finch subway station", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 4, "desc": "minute to the Finch subway station", "img": "images/demo-page-assets/img-block-1.png" },
 
-  { "duration": 2, "desc": "minute to the Finch bus stop", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 2, "desc": "minute to the Finch bus stop", "img": "images/demo-page-assets/img-block-2.png" },
 
-  { "duration": 2, "desc": "minute walk to Hendon Park", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 2, "desc": "minute walk to <br> Hendon Park", "img": "images/demo-page-assets/img-block-3.png" },
 
   { "duration": 7, "desc": "minute walk to Edithvale Community Centre",
-  "img": "images/demo-page-assets/img-block-1.png" },
+  "img": "images/demo-page-assets/img-block-4.png" },
 
-  { "duration": 7, "desc": "minute bike ride to Yound & sheppard", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 7, "desc": "minute bike ride to Yound & sheppard", "img": "images/demo-page-assets/img-block-5.png" },
 
-  { "duration": 5, "desc": "minutes walk to shops & restaurants", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 5, "desc": "minute walk to shops & restaurants", "img": "images/demo-page-assets/img-block-6.png" },
 
-  { "duration": 16, "desc": "minute drive to York University", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 16, "desc": "minute drive to York University", "img": "images/demo-page-assets/img-block-7.png" },
 
-  { "duration": 40, "desc": "minute subway ride downtown", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 40, "desc": "minute subway ride downtown", "img": "images/demo-page-assets/img-block-8.png" },
 ]
 
 nearby_details.forEach(item => {
@@ -59,11 +59,11 @@ nearby_details.forEach(item => {
 });
 
 const connectivity_details = [
-  { "duration": 60, "desc": "Bike Score", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 60, "desc": "Bike Score", "img": "images/demo-page-assets/img-block-9.png" },
 
-  { "duration": 96, "desc": "Transit Score", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 96, "desc": "Transit Score", "img": "images/demo-page-assets/img-block-10.png" },
 
-  { "duration": 64, "desc": "Walk Score", "img": "images/demo-page-assets/img-block-1.png" },
+  { "duration": 64, "desc": "Walk Score", "img": "images/demo-page-assets/img-block-11.png" },
 ]
 
 connectivity_details.forEach(item => {
@@ -92,3 +92,20 @@ connectivity_details.forEach(item => {
                             </div>
                   `);  
 });
+
+
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+const obj = document.getElementById("value");
+animateValue(obj, 100, 0, 5000);
